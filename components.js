@@ -32,7 +32,7 @@ var components = function () {
         var iconSources = {
             warning: './images/icons/warning.svg',
             success: './images/icons/success.svg',
-            info: './images/icons/info.svg',
+            info: './info.svg',
             error: './images/icons/error.svg'
         }
         var singleToast = document.createElement('div');
