@@ -1,6 +1,6 @@
 {
   "name": "toast-notification",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Toast notification for react project",
   "main": "components.js",
   "scripts": {
