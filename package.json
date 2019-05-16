@@ -1,0 +1,24 @@
+{
+  "name": "init",
+  "version": "1.0.0",
+  "description": "Toast notification for react project",
+  "main": "components.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chernovolod/toast-notifications.git"
+  },
+  "keywords": [
+    "notifications",
+    "toast-notifications",
+    "toasts"
+  ],
+  "author": "Chernovolod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chernovolod/toast-notifications/issues"
+  },
+  "homepage": "https://github.com/Chernovolod/toast-notifications#readme"
+}

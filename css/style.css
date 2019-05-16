@@ -1,0 +1,130 @@
+@import "./colors.css";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.toast-notification {
+    max-height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    transition:all .3s ease-in-out;
+}
+
+.toast-notification::-webkit-scrollbar {
+    width: 9px;
+}
+
+.toast-notification::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.toast-notification::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--color-dark);
+}
+
+.remove {
+    position: relative;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: right;
+    transform: scale(0);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 60px;
+    opacity: .4;
+    transition:all 3s ease-in-out;
+    animation: remove-item .4s ease-in-out;
+}
+
+@keyframes remove-item {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform:scale(0);
+    }
+}
+
+.toast-notification__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid var(--color-black);
+}
+
+.toast-notification__success {
+    background-color: var(--color-success);
+}
+
+.toast-notification__info {
+    background-color: var(--color-info);
+}
+
+.toast-notification__warning {
+    background-color: var(--color-warning);
+}
+
+.toast-notification__error {
+    background-color: var(--color-black);
+}
+
+.toast-notification__warning, .toast-notification__success, .toast-notification__info, .toast-notification__error {
+    position: relative;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform-origin: right;
+    transform: scale(.9);
+    animation: show-toast .4s ease-in-out ;
+    transition: all .3s ease-in-out;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 320px;
+    min-height: 70px;
+}
+
+.toast-notification__icon {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes show-toast {
+
+    0%  {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.9);
+
+    }
+
+}
