@@ -8,7 +8,6 @@ var components = function () {
         var toastsParent = document.querySelector('.toast-notification');
         setTimeout((function () {
             if (this.parentNode.contains(this.DOMnode) && this.parentNode === toastsParent) {
-                console.log(this.parentNode)
                 this.parentNode.removeChild(this.DOMnode);
             }
         }).bind(this), this.timeOut || 5000)
